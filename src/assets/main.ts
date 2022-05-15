@@ -179,6 +179,13 @@ class Estacionamento {
       valor: 0,
     };
 
+    if (
+      estacionamento.patio.map((carro) => carro.placa).includes(carro.placa)
+    ) {
+      alert('Placa já cadastrada!');
+      return;
+    }
+
     estacionamento.adicionar(carro);
     estacionamento.salvar();
     estacionamentoFront.adicionarFront(carro);
