@@ -113,9 +113,17 @@ class Estacionamento {
     estacionamentoFront.renderFront();
     $('#send').addEventListener('click', () => {
         const nome = $('#name').value;
-        const placa = $('#licence').value;
+        const placa = $('#licence').value.toUpperCase();
         if (!nome || !placa) {
             alert('Os campos são obrigatórios.');
+            return;
+        }
+        const regexPlaca = new RegExp(/^[A-Z]{3}[0-9]{4}$/);
+        const regexPlacaMerc = new RegExp(/^[A-Z]{3}[0-9]{1}[A-Z]{1}[0-9]{2}$/);
+        if (!regexPlaca.test(placa)
+            ? !regexPlacaMerc.test(placa)
+            : regexPlacaMerc.test(placa)) {
+            alert('Placa errada!');
             return;
         }
         const carro = {
