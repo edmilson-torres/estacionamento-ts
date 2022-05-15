@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Estacionamento</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="cadastrar">
+            <h2 class="title">Nova entrada</h2>
+            <div class="input-group">
+                <label for="name" class="label">Veiculo</label>
+                <input type="text" id="name" class="input" placeholder="Nome do veículo" autocomplete="off"
+                    maxlength="100" />
+                <span class="error-message"></span>
+                <svg class="icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                </svg>
+
+                <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+            <div class="input-group">
+                <label for="licence" class="label">Placa</label>
+                <input type="text" id="licence" class="input" placeholder="Placa do veículo" autocomplete="off"
+                    maxlength="7" />
+                <span class="error-message"></span>
+                <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                </svg>
+
+                <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                        clip-rule="evenodd" />
+                </svg>
+
+            </div>
+            <button id="send" class="success button">Registrar</button>
+
+        </div>
+        <div class="entradas">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Veículo</th>
+                        <th>Placa</th>
+                        <th>Entrada</th>
+                        <th>Saída</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="garage"></tbody>
+            </table>
+            <div class="footer">👋 Projeto para aula "Aprenda a criar um sistema de estacionamento usando TypeScript",
+                do
+                professor Andre Soares da <a href="https://www.dio.me" target="_blank">DIO</a></div>
+        </div>
+    </div>
+
+</body>
+
+<script src="./assets/main.js"></script>
+
+</html>
